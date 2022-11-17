@@ -1,7 +1,21 @@
-const answers = [];
+const numberOfFilms = +prompt('Скільки фільмов ви вже подививилися', 'Впишить кількість фільмов');
 
-answers[0] = prompt('Як ваше імя?', 'Ваше імя')
-answers[1] = prompt('Скільки вам років?', '')
-answers[2] = prompt('Який улюблений фільм', '')
 
-console.log(answers)
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+const nameMovies = prompt('Один з останіх продивляних фільмов?', 'Впишіть назву фільму');
+const ratingMovies = prompt('На скільки ви оцінюєте його?', 'Впишіть оцінку фільма');
+
+const nameMovies2 = prompt('Один з останіх продивляних фільмов?', 'Впишіть назву фільму');
+const ratingMovies2 = prompt('На скільки ви оцінюєте його?', 'Впишіть оцінку фільма');
+
+personalMovieDB.movies[nameMovies] = ratingMovies;
+personalMovieDB.movies[nameMovies2] = ratingMovies2;
+
+console.log(personalMovieDB); 
